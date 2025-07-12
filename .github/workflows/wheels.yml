@@ -2,7 +2,7 @@ name: wheels
 
 on:
   push:
-    branches: [master]
+    branches: [WoA_CI]
   pull_request:
     branches: ['*']
     types:
@@ -70,6 +70,19 @@ jobs:
           - os: windows-latest
             build: 'cp3*-win_amd64'
             name: Windows 64-bit
+
+          - os: windows-11-arm
+            build: 'cp310-win_arm64'
+            name: Windows ARM64
+          - os: windows-11-arm
+            build: 'cp311-win_arm64'
+            name: Windows ARM64
+          - os: windows-11-arm
+            build: 'cp312-win_arm64'
+            name: Windows ARM64
+          - os: windows-11-arm
+            build: 'cp313-win_arm64'
+            name: Windows ARM64
 
           - os: ubuntu-22.04
             build: 'cp*-manylinux_x86_64'
