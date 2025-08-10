@@ -2,7 +2,7 @@ name: wheels
 
 on:
   push:
-    branches: [master]
+    branches: [new_j]
   pull_request:
     branches: ['*']
     types:
